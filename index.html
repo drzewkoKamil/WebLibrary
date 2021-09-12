@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div id="myModal" class="modal">
+    <div class="modalContent">
+        <span class="close">&times;</span>
+        <div class="modalBody">
+            <div class="formContainer">
+                <div class="modalHeader">
+                    <h2>Add a Book</h2>
+                </div>
+                <input type="text" class="formInput"
+                       id="title" placeholder="Title"
+                       name="title" required />
+                <label for="title" class="formLabel"></label>
+                <input type="text" class="formInput"
+                       id="author" placeholder="Author"
+                       name="author" required />
+                <label for="author" class="formLabel"></label>
+                <input type="text" class="formInput"
+                       id="pages" placeholder="Pages"
+                       name="pages" required />
+                <label for="pages" class="formLabel"></label>
+                <input type="text" class="formInput"
+                       id="status" placeholder="Reading status"
+                       name="status" required />
+                <label for="status" class="formLabel"></label>
+            </div>
+        </div>
+        <div class="modalFooter">
+            <h3>Modal Footer</h3>
+        </div>
+
+    </div>
+</div>
+
+<div id="flexContainer">
+    <table id="booksTable"></table>
+    <button type="button" onclick="createBook()" id="createBookButton">ADD BOOK
+    </button>
+</div>
+
+    <script src="main.js"></script>
+</body>
+</html>
