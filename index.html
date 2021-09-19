@@ -21,35 +21,43 @@
                 </div>
                 <input type="text" class="formInput"
                        id="title" placeholder="Title"
-                       name="title" required />
+                       name="title" autocomplete="off" required />
                 <label for="title" class="formLabel"></label>
                 <input type="text" class="formInput"
                        id="author" placeholder="Author"
-                       name="author" required />
+                       name="author" autocomplete="off" required />
                 <label for="author" class="formLabel"></label>
                 <input type="text" class="formInput"
-                       id="pages" placeholder="Pages"
-                       name="pages" required />
-                <label for="pages" class="formLabel"></label>
-                <input type="text" class="formInput"
-                       id="status" placeholder="Reading status"
-                       name="status" required />
-                <label for="status" class="formLabel"></label>
+                       id="genre" placeholder="Genre"
+                       name="genre" autocomplete="off" required />
+                <label for="genre" class="formLabel"></label>
+                <div id="status" class="formInput">
+                    <label for="status" class="checkBoxLabel">
+                        <input type="checkbox"
+                               placeholder="Reading status"
+                               name="status" autocomplete="off"
+                               id="readStatus" required />
+                        Read?</label>
+
+                </div>
             </div>
         </div>
         <div class="modalFooter">
-            <h3>Modal Footer</h3>
+            <button id="addBookButton" type="button">ADD
+                BOOK</button>
         </div>
 
     </div>
 </div>
 
 <div id="flexContainer">
+    <h1 id="header">The Vanilla JavaScript Library</h1>
     <table id="booksTable"></table>
-    <button type="button" onclick="createBook()" id="createBookButton">ADD BOOK
+    <button type="button" id="createBookButton">ADD BOOK
     </button>
 </div>
 
+<div id="snackbar"></div>
     <script src="main.js"></script>
 </body>
 </html>
