@@ -1,10 +1,37 @@
-function Book(title, author, genre, read) {
-    this.title = title
-    this.author = author;
-    this.genre = genre;
-    this.read = read;
-}
+class Book{
+    constructor(title, author, genre, read){
+        this._title = title;
+        this._author = author;
+        this._genre = genre;
+        this._read = read;
+    }
 
+    get title() {
+        return this._title;
+    }
+    get author() {
+        return this._author;
+    }
+    get genre() {
+        return this._genre;
+    }
+    get read() {
+        return this._read;
+    }
+
+    set title(value) {
+        this._title = value;
+    }
+    set author(value) {
+        this._author = value;
+    }
+    set genre(value) {
+        this._genre = value;
+    }
+    set read(value) {
+        this._read = value;
+    }
+}
 
 function addBookToLibrary(book) {
     myLibrary.push(book)
@@ -59,8 +86,10 @@ function createChangeReadStatusButton(index) {
         console.log("change status function")
         console.log(index);
         console.log(myLibrary[index]);
+        console.log(myLibrary[index].read)
         if (myLibrary[index].read === "read") {
             myLibrary[index].read = "not read";
+            console.log(myLibrary[index].read)
         } else {
             myLibrary[index].read = "read";
         }
